@@ -1,0 +1,139 @@
+[
+	{
+		"key": "alt+shift+y",
+		"command": "editor.action.copyLinesDownAction",
+		"when": "editorFocus"
+	},
+	{
+		"key": "alt+b",
+		"command": "openInDefaultBrowser.openInDefaultBrowser"
+	},
+	{
+		"key": "shift+alt+r",
+		"command": "code-runner.run"
+	},
+	{
+		"key": "ctrl+alt+n",
+		"command": "-code-runner.run"
+	},
+
+	//explorer
+	{
+		"key": "alt+e", // when Explorer not open
+		"command": "workbench.files.action.focusFilesExplorer",
+		"when": "!explorerViewletVisible"
+	},
+	{
+		"key": "alt+e", // when Explorer open
+		"command": "workbench.action.toggleSidebarVisibility",
+		"when": "explorerViewletVisible"
+	},
+	//terminal
+	{
+		"key": "alt+t",
+		"command": "workbench.action.terminal.toggleTerminal",
+		"when": "terminal.active"
+	},
+	//floader
+	{
+		"key": "a",
+		"command": "explorer.newFile",
+		"when": "filesExplorerFocus && !inputFocus"
+	},
+	{
+		"key": "shift+a",
+		"command": "explorer.newFolder",
+		"when": "filesExplorerFocus && !inputFocus"
+	},
+	//back
+	{
+		"key": "alt+z",
+		"command": "-extension.pxToremAndRemToPx"
+	},
+	{
+		"key": "capslock",
+		"command": "workbench.action.terminal.sendSequence",
+		"args": { "text": "\u001b" },
+		"when": "terminalFocus"
+	},
+	//focus
+	{
+		"key": "ctrl+h",
+		"command": "workbench.action.focusLeftGroup",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+l",
+		"command": "workbench.action.focusRightGroup",
+		"when": "editorTextFocus"
+	},
+	//closes
+	{
+		"key": "ctrl+w",
+		"command": "workbench.action.closeActiveEditor"
+	},
+
+	//save
+	{
+		"key": "ctrl+enter",
+
+		"command": "workbench.action.files.save",
+		"when": "editorTextFocus"
+	},
+	//movingtab
+	{
+		"key": "alt+1",
+		"command": "workbench.action.nextEditor",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+2",
+		"command": "workbench.action.previousEditor",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "shift+q",
+		"command": "workbench.action.splitEditor",
+		"args": { "direction": "right" },
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+w q",
+		"command": "-workbench.action.closeActiveEditor",
+		"when": "!editorTextFocus && !filesExplorerFocus && !searchViewletFocus && !terminalFocus && neovim.mode != 'cmdline'"
+	},
+	{
+		"key": "shift+space",
+		"command": "editor.action.triggerSuggest",
+		"when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+	},
+	{
+		"key": "ctrl+space",
+		"command": "-editor.action.triggerSuggest",
+		"when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly && !suggestWidgetVisible"
+	},
+	{
+		"key": "ctrl+q",
+		"command": "-workbench.action.quit"
+	},
+	{
+		"key": "shift+j",
+		"command": "selectNextSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+	},
+	{
+		"key": "down",
+		"command": "-selectNextSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+	},
+	{
+		"key": "shift+k",
+		"command": "selectPrevSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+	},
+	{
+		"key": "up",
+		"command": "-selectPrevSuggestion",
+		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+	}
+]

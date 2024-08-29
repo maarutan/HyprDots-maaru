@@ -1,0 +1,183 @@
+--------------------------------------------
+   Hyprland Crash Report
+--------------------------------------------
+I tried so hard, and got so far...
+
+Hyprland received signal 6(ABRT)
+Version: 9a09eac79b85c846e3a865a9078a3f8ff65a9259
+Tag: v0.42.0
+Date: Wed Aug 7 19:17:10 2024
+Flags:
+
+System info:
+	System name: Linux
+	Node name: Jarvis
+	Release: 6.10.6-zen1-1-zen
+	Version: #1 ZEN SMP PREEMPT_DYNAMIC Mon, 19 Aug 2024 17:02:05 +0000
+
+GPU:
+	01:00.0 VGA compatible controller [0300]: NVIDIA Corporation TU117M [GeForce GTX 1650 Mobile / Max-Q] [10de:1f99] (rev a1) (prog-if 00 [VGA controller])
+05:00.0 VGA compatible controller [0300]: Advanced Micro Devices, Inc. [AMD/ATI] Renoir [Radeon Vega Series / Radeon Vega Mobile Series] [1002:1636] (rev c7) (prog-if 00 [VGA controller])
+
+
+os-release:
+	NAME="Arch Linux"
+	PRETTY_NAME="Arch Linux"
+	ID=arch
+	BUILD_ID=rolling
+	ANSI_COLOR="38;2;23;147;209"
+	HOME_URL="https://archlinux.org/"
+	DOCUMENTATION_URL="https://wiki.archlinux.org/"
+	SUPPORT_URL="https://bbs.archlinux.org/"
+	BUG_REPORT_URL="https://gitlab.archlinux.org/groups/archlinux/-/issues"
+	PRIVACY_POLICY_URL="https://terms.archlinux.org/docs/privacy-policy/"
+	LOGO=archlinux-logo
+Backtrace:
+	# | Hyprland(_Z12getBacktracev+0x61) [0x5c42feef26a1]
+		getBacktrace()
+		??:?
+	#1 | Hyprland(_ZN13CrashReporter18createAndSaveCrashEi+0xb89) [0x5c42fee72609]
+		CrashReporter::createAndSaveCrash(int)
+		??:?
+	#2 | Hyprland(_Z25handleUnrecoverableSignali+0x71) [0x5c42fedf2f71]
+		handleUnrecoverableSignal(int)
+		??:?
+	#3 | /usr/lib/libc.so.6(+0x3d1d0) [0x750c4535d1d0]
+		??
+		??:0
+	#4 | /usr/lib/libc.so.6(+0x963f4) [0x750c453b63f4]
+		??
+		??:0
+	#5 | /usr/lib/libc.so.6(gsignal+0x20) [0x750c4535d120]
+		??
+		??:0
+	#6 | Hyprland(_ZN15CHyprOpenGLImpl11beginSimpleEP8CMonitorRKN9Hyprutils4Math7CRegionENS2_6Memory14CSharedPointerI13CRenderbufferEEP12CFramebuffer+0x3ec) [0x5c42ff0b9a3c]
+		CHyprOpenGLImpl::beginSimple(CMonitor*, Hyprutils::Math::CRegion const&, Hyprutils::Memory::CSharedPointer<CRenderbuffer>, CFramebuffer*)
+		??:?
+	#7 | Hyprland(_ZN15CPointerManager20renderHWCursorBufferEN9Hyprutils6Memory14CSharedPointerINS_20SMonitorPointerStateEEENS2_I8CTextureEE+0x8c2) [0x5c42fef4bed2]
+		CPointerManager::renderHWCursorBuffer(Hyprutils::Memory::CSharedPointer<CPointerManager::SMonitorPointerState>, Hyprutils::Memory::CSharedPointer<CTexture>)
+		??:?
+	#8 | Hyprland(_ZN15CPointerManager21attemptHardwareCursorEN9Hyprutils6Memory14CSharedPointerINS_20SMonitorPointerStateEEE+0x1b0) [0x5c42fef4d870]
+		CPointerManager::attemptHardwareCursor(Hyprutils::Memory::CSharedPointer<CPointerManager::SMonitorPointerState>)
+		??:?
+	#9 | Hyprland(_ZN15CPointerManager19updateCursorBackendEv+0x3d0) [0x5c42fef4df70]
+		CPointerManager::updateCursorBackend()
+		??:?
+	#1 | Hyprland(+0x2bd292) [0x5c42fef54292]
+		CPointerManager::damageCursor(Hyprutils::Memory::CSharedPointer<CMonitor>)
+		??:?
+	#11 | /usr/lib/libhyprutils.so.1(_ZN9Hyprutils6Signal15CSignalListener4emitESt3any+0x5f) [0x750c45901c9f]
+		??
+		??:0
+	#12 | /usr/lib/libhyprutils.so.1(_ZN9Hyprutils6Signal7CSignal4emitESt3any+0x1ee) [0x750c4590200e]
+		??
+		??:0
+	#13 | Hyprland(+0x3ef875) [0x5c42ff086875]
+		CWLDataSourceResource::dndDone()
+		??:?
+	#14 | Hyprland(_ZN18CWLSurfaceResource8bfHelperESt6vectorIN9Hyprutils6Memory14CSharedPointerIS_EESaIS4_EESt8functionIFvS4_RKNS1_4Math8Vector2DEPvEESC_+0x5e8) [0x5c42ff081198]
+		CWLSurfaceResource::bfHelper(std::vector<Hyprutils::Memory::CSharedPointer<CWLSurfaceResource>, std::allocator<Hyprutils::Memory::CSharedPointer<CWLSurfaceResource> > >, std::function<void (Hyprutils::Memory::CSharedPointer<CWLSurfaceResource>, Hyprutils::Math::Vector2D const&, void*)>, void*)
+		??:?
+	#15 | Hyprland(_ZN18CWLSurfaceResource12breadthfirstESt8functionIFvN9Hyprutils6Memory14CSharedPointerIS_EERKNS1_4Math8Vector2DEPvEES9_+0x1c4) [0x5c42ff081b84]
+		CWLSurfaceResource::breadthfirst(std::function<void (Hyprutils::Memory::CSharedPointer<CWLSurfaceResource>, Hyprutils::Math::Vector2D const&, void*)>, void*)
+		??:?
+	#16 | Hyprland(_ZN18CWLSurfaceResource18commitPendingStateEv+0x782) [0x5c42ff082f12]
+		CWLSurfaceResource::commitPendingState()
+		??:?
+	#17 | Hyprland(+0x49dc66) [0x5c42ff134c66]
+		CWpDrmLeaseDeviceV1::sendReleasedRaw()
+		??:?
+	#18 | /usr/lib/libffi.so.8(+0x7596) [0x750c451bd596]
+		??
+		??:0
+	#19 | /usr/lib/libffi.so.8(+0x400e) [0x750c451ba00e]
+		??
+		??:0
+	#2 | /usr/lib/libffi.so.8(ffi_call+0x123) [0x750c451bcbd3]
+		??
+		??:0
+	#21 | /usr/lib/libwayland-server.so.0(+0x6e45) [0x750c45cdde45]
+		??
+		??:0
+	#22 | /usr/lib/libwayland-server.so.0(+0xbc42) [0x750c45ce2c42]
+		??
+		??:0
+	#23 | /usr/lib/libwayland-server.so.0(wl_event_loop_dispatch+0x1f2) [0x750c45ce10a2]
+		??
+		??:0
+	#24 | /usr/lib/libwayland-server.so.0(wl_display_run+0x2f) [0x750c45ce310f]
+		??
+		??:0
+	#25 | Hyprland(_ZN17CEventLoopManager9enterLoopEv+0x2a9) [0x5c42fef76359]
+		CEventLoopManager::enterLoop()
+		??:?
+	#26 | Hyprland(main+0xc98) [0x5c42fedb0768]
+		main
+		??:?
+	#27 | /usr/lib/libc.so.6(+0x25e08) [0x750c45345e08]
+		??
+		??:0
+	#28 | /usr/lib/libc.so.6(__libc_start_main+0x8c) [0x750c45345ecc]
+		??
+		??:0
+	#29 | Hyprland(_start+0x25) [0x5c42fedeefc5]
+		_start
+		??:?
+
+
+Log tail:
+[LOG] [AQ] drm: Cursor buffer imported into KMS with id 105
+[LOG] [AQ] drm: Cursor buffer imported into KMS with id 105
+[LOG] [AQ] [libinput] event6  - debounce state: DEBOUNCE_STATE_IS_UP → DEBOUNCE_EVENT_PRESS → DEBOUNCE_STATE_IS_DOWN_WAITING
+
+[LOG] [AQ] [libinput] event6  - debounce state: DEBOUNCE_STATE_IS_DOWN_WAITING → DEBOUNCE_EVENT_TIMEOUT → DEBOUNCE_STATE_IS_DOWN
+
+[LOG] [AQ] [libinput] event6  - debounce state: DEBOUNCE_STATE_IS_DOWN → DEBOUNCE_EVENT_RELEASE → DEBOUNCE_STATE_IS_UP_DETECTING_SPURIOUS
+
+[LOG] [AQ] [libinput] event6  - debounce state: DEBOUNCE_STATE_IS_UP_DETECTING_SPURIOUS → DEBOUNCE_EVENT_TIMEOUT_SHORT → DEBOUNCE_STATE_IS_UP_WAITING
+
+[LOG] [AQ] [libinput] event6  - debounce state: DEBOUNCE_STATE_IS_UP_WAITING → DEBOUNCE_EVENT_TIMEOUT → DEBOUNCE_STATE_IS_UP
+
+[LOG] [WLCompositor] New wl_surface with id 42 at 5c430d1cfde0
+[LOG] [WLCompositor] New wl_surface with id 31 at 5c430d955d30
+[LOG] [XDGShell] New xdg_surface at 5c430d880ec0
+[LOG] [XDGShell] xdg_surface 5c430d3a3ad0 gets a toplevel 5c430d223d40
+[LOG] CWLSurface 5c430d17a130 called init()
+[LOG] [XDGShell] Toplevel 5c430d223d40 sets parent to 0
+[LOG] Window 5c430d999a70 set title to Для сети Wi-Fi требуется аутентификация
+[LOG] Searching for matching rules for  (title: Для сети Wi-Fi требуется аутентификация)
+[LOG] Window 5c430d999a70 set class to nm-applet
+[LOG] Searching for matching rules for nm-applet (title: Для сети Wi-Fi требуется аутентификация)
+[LOG] Searching for matching rules for nm-applet (title: Для сети Wi-Fi требуется аутентификация)
+[LOG] Layout predicts size [Vector2D: x: 960, y: 513.5] for [Window 5c430d999a70: title: "Для сети Wi-Fi требуется аутентификация"]
+[LOG] [XDGActivation] assigned new xdg-activation token bb6bbcd9-1a50-4c70-8822-3c20b98d8486
+[LOG] [XDGShell] xdg_surface 5c430d880ec0 requests geometry 0x0 682x285
+[LOG] [WLCompositor] New wl_region with id 44 at 5c430d2619a0
+[LOG] Searching for matching rules for nm-applet (title: Для сети Wi-Fi требуется аутентификация)
+[LOG] Searching for matching rules for kitty (title: ranger)
+[LOG] [WLDataDevice] New offer 5c430d9300d0 for data source 5c430d95d700
+[LOG] [WLDataDevice]  | offer 5c430d9300d0 supports mime text/plain
+[LOG] [WLDataDevice]  | offer 5c430d9300d0 supports mime text/plain
+[LOG] [WLDataDevice]  | offer 5c430d9300d0 supports mime text/plain;charset=utf-8
+[LOG] [WLDataDevice]  | offer 5c430d9300d0 supports mime TEXT
+[LOG] [WLDataDevice]  | offer 5c430d9300d0 supports mime STRING
+[LOG] [WLDataDevice]  | offer 5c430d9300d0 supports mime UTF8_STRING
+[LOG] Set keyboard focus to surface 5c430d1cfde0, with [Window 5c430d999a70: title: "Для сети Wi-Fi требуется аутентификация"]
+[LOG] Searching for matching rules for nm-applet (title: Для сети Wi-Fi требуется аутентификация)
+[LOG] Map request dispatched, monitor eDP-1, window pos: [619.00000, 397.50000], window size: [682.00000, 285.00000]
+[LOG] [ForeignToplevelWlr] Newly mapped window 00005c430d999a70
+[LOG] [ForeignToplevelWlr] Newly mapped window 00005c430d999a70
+[LOG] Searching for matching rules for kitty (title: ranger)
+[LOG] Searching for matching rules for kitty (title: ranger)
+[LOG] Searching for matching rules for nm-applet (title: Для сети Wi-Fi требуется аутентификация)
+[LOG] [WLCompositor] New wl_surface with id 41 at 5c430d955d30
+[LOG] cursorImage request: surface 5c430c0cfc20
+[LOG] CWLSurface 5c430cd1ba40 called init()
+[LOG] [AQ] drm: Cursor buffer imported into KMS with id 105
+[CRITICAL] 
+==========================================================================================
+ASSERTION FAILED! 
+
+Aborting, glGetGraphicsResetStatus returned GL_INNOCENT_CONTEXT_RESET. Cannot continue until proper GPU reset handling is implemented.
+
+at: line 745 in OpenGL.cpp

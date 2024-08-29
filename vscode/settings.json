@@ -1,0 +1,161 @@
+{
+	// main editor  settings
+	"editor.suggestSelection": "first",
+	"editor.detectIndentation": true,
+	"editor.minimap.enabled": false,
+	"editor.smoothScrolling": true,
+	"editor.folding": true,
+	"window.menuBarVisibility": "toggle",
+	"window.openFilesInNewWindow": "off",
+	"workbench.activityBar.location": "hidden",
+	"workbench.colorTheme": "Moonlight II",
+	"window.commandCenter": false,
+	"workbench.layoutControl.enabled": false,
+	"window.zoomLevel": 3,
+	"workbench.iconTheme": "vscode-icons",
+	"editor.wordWrap": "bounded",
+	//будет ли редактор крутить ниже строки
+	"editor.scrollBeyondLastLine": true,
+	//мульни курсор
+	"editor.multiCursorModifier": "ctrlCmd",
+	// тэги
+	"editor.linkedEditing": true,
+	//быстрые подсказки
+	"editor.quickSuggestionsDelay": 0,
+	//scrollbar
+	"editor.scrollbar.vertical": "hidden",
+	"editor.scrollbar.horizontal": "hidden",
+	//minimal tab
+	"window.density.editorTabHeight": "compact",
+	//cursor
+	"editor.cursorBlinking": "expand",
+	"editor.cursorStyle": "line",
+	"editor.cursorSmoothCaretAnimation": "on",
+	"editor.hideCursorInOverviewRuler": true,
+
+	//font
+	"editor.fontLigatures": true,
+	"editor.inlayHints.fontFamily": "FiraCode Nerd Font",
+	"editor.fontFamily": "FiraCode Nerd Font",
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": [
+					"comment",
+					"entity.name.type.class",
+					"keyword",
+					"constant",
+					"storage.modifier",
+					"storage.type.class.js"
+				],
+				"settings": {
+					"fontStyle": "italic"
+				}
+			},
+			{
+				"scope": [
+					"invalid",
+					"keyword.operator",
+					"constant.numeric.css",
+					"keyword.other.unit.px.css",
+					"constant.numeric.decimal.js",
+					"constant.numeric.json"
+				],
+				"settings": {
+					"fontStyle": ""
+				}
+			}
+		]
+	},
+
+	// terminal
+	"terminal.integrated.fontFamily": "FiraCode Nerd Font",
+	"terminal.integrated.fontSize": 12,
+	"terminal.integrated.tabs.enabled": false,
+
+	//tree
+	"explorer.confirmDelete": false,
+	"explorer.compactFolders": false,
+	"explorer.confirmDragAndDrop": false,
+
+	// уменьшить размер вкладок когда нет места
+	"workbench.editor.tabSizing": "shrink",
+	"workbench.startupEditor": "newUntitledFile",
+	//formatter
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"prettier.singleQuote": true,
+	"prettier.jsxSingleQuote": true,
+	//круглые скобки вокруг стрелочной фунции
+	"prettier.arrowParens": "avoid",
+	"editor.inlineSuggest.enabled": true,
+	// Настройки для Breadcrumbs
+	"breadcrumbs.icons": false,
+	"breadcrumbs.showKeys": false,
+	"breadcrumbs.showFiles": false,
+	"breadcrumbs.symbolPath": "off",
+	"breadcrumbs.showArrays": false,
+	"breadcrumbs.showEvents": false,
+	"breadcrumbs.showFields": false,
+	"breadcrumbs.showClasses": false,
+	"breadcrumbs.showMethods": false,
+	"breadcrumbs.showBooleans": false,
+	"breadcrumbs.showFunctions": false,
+	"breadcrumbs.showConstants": false,
+	"breadcrumbs.showEnumMembers": false,
+	"breadcrumbs.showConstructors": false,
+	// Настройки для JS и TS
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"typescript.preferences.quoteStyle": "single",
+	"javascript.preferences.quoteStyle": "single",
+	"javascript.format.semicolons": "remove",
+	"typescript.format.semicolons": "remove",
+	"js/ts.implicitProjectConfig.experimentalDecorators": true,
+
+	"git.enableSmartCommit": true,
+	"fiveServer.browser": ["stable-google-chrome"],
+	"open-in-browser.default": "stable-google-chrome",
+	"extensions.experimental.affinity": {
+		"asvetliakov.vscode-neovim": 1
+	},
+	"vscode-neovim.afterInitConfig": [
+		"set clipboard=unnamedplus",
+		"set relativenumber"
+	],
+	"vscode-neovim.compositeKeys": {
+		"jk": {
+			// Use lua to execute any logic
+			"command": "vscode-neovim.lua",
+			"args": [
+				[
+					"local code = require('vscode')",
+					"code.action('vscode-neovim.escape')",
+					"code.action('workbench.action.files.save')"
+				]
+			]
+		}
+	},
+
+	"prettier.useTabs": true,
+	"prettier.tabWidth": 3,
+	//линия таба
+	"indentRainbow.indicatorStyle": "light",
+	"indentRainbow.colorOnWhiteSpaceOnly": true,
+	"indentRainbow.lightIndicatorStyleLineWidth": 1.4,
+	"indentRainbow.errorColor": "rgba(128,32,32,1)",
+	"indentRainbow.tabmixColor": "rgba(128,32,96,1)",
+	"indentRainbow.colors": [
+		"rgba(255,255,64,1)",
+		"rgba(127,255,127,1)",
+		"rgba(255,127,255,1)",
+		"rgba(79,236,236,1)"
+	],
+	"editor.renderWhitespace": "all",
+	"editor.glyphMargin": false,
+	// "workbench.editor.tabSizingFixedMaxWidth": 100,
+	"notebook.defaultFormatter": "esbenp.prettier-vscode",
+	"vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+	"editor.lineNumbers": "relative",
+	"diffEditor.hideUnchangedRegions.enabled": true
+}

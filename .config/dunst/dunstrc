@@ -1,0 +1,26 @@
+[global]
+    background  = "#282A36"
+	#background = "#1e1e1e44"
+    foreground  = "#C1CDE6"
+    frame_color = "#AE91E4"
+    origin      =	 top-center
+	width = 380
+    timeout = 2
+	padding = 30
+	horizontal_padding = 30
+	font = FiraCode NerdFont 15
+	notification_limit = 5
+	corner_radius = 23
+	icon_position = left
+	icon_theme = Dracula
+	alignment = left
+	enable_recursive_icon_lookup = true
+    gap_size = 30 
+	line_height = 10
+	browser = /usr/bin/xdg-open
+	frame_width = 3
+	
+    [ignore_flameshot_warning]
+        body = "grim's screenshot component is implemented based on wlroots, it may not be used in GNOME or similar desktop environments"
+         format = ""
+
