@@ -24,9 +24,8 @@ use = ""
 # : }}}
 
 # : Manager {{{
-
 [manager]
-cwd = { fg = "cyan" }
+sort_by = "natural"
 
 # Hovered
 hovered         = { reversed = true }
