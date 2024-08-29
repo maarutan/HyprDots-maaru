@@ -19,6 +19,7 @@
 3. [swww](https://github.com/LGFae/swww) (wallpapers)
 4. [rofi](https://github.com/davatorium/rofi) (application launcher)
 5. [hyprland](https://github.com/hyprwm/Hyprland) + [wayland](https://github.com/topics/wayland)
+6. [kitty](https://github.com/kovidgoyal/kitty) (terminal)
 
 <p>
     font: FiraCode nerd fonts
