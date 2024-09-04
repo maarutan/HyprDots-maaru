@@ -19,11 +19,6 @@
 
 	//explorer
 	{
-		"key": "alt+e", // when Explorer not open
-		"command": "workbench.files.action.focusFilesExplorer",
-		"when": "!explorerViewletVisible"
-	},
-	{
 		"key": "alt+e", // when Explorer open
 		"command": "workbench.action.toggleSidebarVisibility",
 		"when": "explorerViewletVisible"
@@ -62,12 +57,6 @@
 		"command": "workbench.action.focusLeftGroup",
 		"when": "editorTextFocus"
 	},
-	{
-		"key": "ctrl+l",
-		"command": "workbench.action.focusRightGroup",
-		"when": "editorTextFocus"
-	},
-	//closes
 	{
 		"key": "ctrl+w",
 		"command": "workbench.action.closeActiveEditor"
@@ -135,5 +124,107 @@
 		"key": "up",
 		"command": "-selectPrevSuggestion",
 		"when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+	},
+	{
+		"key": "ctrl+shift+alt+k",
+		"command": "editor.action.copyLinesUpAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+shift+alt+up",
+		"command": "-editor.action.copyLinesUpAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+shift+alt+j",
+		"command": "editor.action.copyLinesDownAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+shift+alt+down",
+		"command": "-editor.action.copyLinesDownAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "shift+alt+f",
+		"command": "workbench.action.focusSideBar"
+	},
+	{
+		"key": "alt+e",
+		"command": "workbench.action.toggleSidebarVisibility"
+	},
+	{
+		"key": "ctrl+b",
+		"command": "-workbench.action.toggleSidebarVisibility"
+	},
+	{
+		"key": "shift+alt+e",
+		"command": "workbench.view.explorer",
+		"when": "viewContainer.workbench.view.explorer.enabled"
+	},
+	{
+		"key": "ctrl+shift+e",
+		"command": "-workbench.view.explorer",
+		"when": "viewContainer.workbench.view.explorer.enabled"
+	},
+	{
+		"key": "shift+alt+x",
+		"command": "workbench.view.extensions",
+		"when": "viewContainer.workbench.view.extensions.enabled"
+	},
+	{
+		"key": "shift+alt+d",
+		"command": "-notebook.cell.detectLanguage",
+		"when": "notebookCellEditable && notebookEditable"
+	},
+	{
+		"key": "shift+alt+d",
+		"command": "-editor.detectLanguage",
+		"when": "editorTextFocus && !notebookEditable"
+	},
+	{
+		"key": "shift+alt+d",
+		"command": "workbench.view.debug",
+		"when": "viewContainer.workbench.view.debug.enabled"
+	},
+	{
+		"key": "alt+k",
+		"command": "-keybindings.editor.recordSearchKeys",
+		"when": "inKeybindings && inKeybindingsSearch"
+	},
+	{
+		"key": "alt+k",
+		"command": "-editor.action.accessibilityHelpConfigureKeybindings",
+		"when": "accessibilityHelpIsShown && accessibleViewHasUnassignedKeybindings"
+	},
+	{
+		"key": "alt+k",
+		"command": "editor.action.moveLinesUpAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "alt+up",
+		"command": "-editor.action.moveLinesUpAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "alt+j",
+		"command": "editor.action.moveLinesDownAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "alt+down",
+		"command": "-editor.action.moveLinesDownAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+/",
+		"command": "-vscode-neovim.send",
+		"when": "editorTextFocus && neovim.ctrlKeysNormal./ && neovim.init && neovim.mode != 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
+	},
+	{
+		"key": "ctrl+/",
+		"command": "-vscode-neovim.send",
+		"when": "editorTextFocus && neovim.ctrlKeysInsert./ && neovim.init && neovim.mode == 'insert' && editorLangId not in 'neovim.editorLangIdExclusions'"
 	}
 ]

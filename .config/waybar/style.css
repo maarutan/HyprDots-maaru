@@ -11,7 +11,7 @@ window#waybar {
 	color: @foreground;
 	border: 1px solid #ab86e4;
 	transition-property: background-color;
-	opacity: 0.9;
+	/* opacity: 0.8; */
 	transition-duration: 0.5s;
 	border-radius: 100px;
 }

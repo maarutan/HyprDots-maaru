@@ -28,13 +28,11 @@ update_system() {
         notify-send "Ошибка" "Ошибка обновления через paru!" -i "$ICON_ERROR"
         return 1
     fi
-
     echo -e "${COLOR_BLUE}\n=== Обновление yay ===${COLOR_RESET}"
     if ! yay -Syu; then
         notify-send "Ошибка" "Ошибка обновления через yay!" -i "$ICON_ERROR"
         return 1
     fi
-
     echo -e "${COLOR_CYAN}\n=== Обновление flatpak ===${COLOR_RESET}"
     if ! flatpak update; then
         notify-send "Ошибка" "Ошибка обновления через flatpak!" -i "$ICON_ERROR"
@@ -52,22 +50,19 @@ while true; do
 
     # Проверка обновлений для pacman
     pacman_updates=$(pacman -Qu)
-    echo -e "${COLOR_YELLOW}  ===> pacman 󰮯 :"
+    echo -e "${COLOR_YELLOW}  ===> pacman -----> 󰮯 :"
     echo "$pacman_updates" | awk '{print "       " $1}'
-
     # Проверка обновлений для paru
     paru_updates=$(paru -Qu)
-    echo -e "${COLOR_GREEN}  ===> paru 󰣇 :"
+    echo -e "${COLOR_GREEN}  ===> paru -------> 󰣇 :"
     echo "$paru_updates" | awk '{print "       " $1}'
-
     # Проверка обновлений для yay
     yay_updates=$(yay -Qu)
-    echo -e "${COLOR_BLUE}  ===> yay 󰣇 :"
+    echo -e "${COLOR_BLUE}  ===> yay --------> 󰣇 :"
     echo "$yay_updates" | awk '{print "       " $1}'
-
     # Проверка обновлений для flatpak
     flatpak_updates=$(flatpak remote-ls --updates)
-    echo -e "${COLOR_CYAN}  ===> flatpak  :"
+    echo -e "${COLOR_CYAN}  ===> flatpak ---->  :"
     echo "$flatpak_updates" | awk '{print "       " $1}'
 
     echo -e "\nНачало обновления системы..."

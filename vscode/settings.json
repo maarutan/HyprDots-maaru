@@ -8,10 +8,9 @@
 	"window.menuBarVisibility": "toggle",
 	"window.openFilesInNewWindow": "off",
 	"workbench.activityBar.location": "hidden",
-	"workbench.colorTheme": "Moonlight II",
 	"window.commandCenter": false,
 	"workbench.layoutControl.enabled": false,
-	"window.zoomLevel": 3,
+	"window.zoomLevel": 2,
 	"workbench.iconTheme": "vscode-icons",
 	"editor.wordWrap": "bounded",
 	//будет ли редактор крутить ниже строки
@@ -32,11 +31,10 @@
 	"editor.cursorStyle": "line",
 	"editor.cursorSmoothCaretAnimation": "on",
 	"editor.hideCursorInOverviewRuler": true,
-
 	//font
 	"editor.fontLigatures": true,
-	"editor.inlayHints.fontFamily": "FiraCode Nerd Font",
-	"editor.fontFamily": "FiraCode Nerd Font",
+	"editor.inlayHints.fontFamily": "FiraCode nerd font",
+	"editor.fontFamily": "FiraCode nerd font",
 	"editor.tokenColorCustomizations": {
 		"textMateRules": [
 			{
@@ -70,7 +68,7 @@
 
 	// terminal
 	"terminal.integrated.fontFamily": "FiraCode Nerd Font",
-	"terminal.integrated.fontSize": 12,
+	"terminal.integrated.fontSize": 13,
 	"terminal.integrated.tabs.enabled": false,
 
 	//tree
@@ -90,6 +88,7 @@
 	"prettier.arrowParens": "avoid",
 	"editor.inlineSuggest.enabled": true,
 	// Настройки для Breadcrumbs
+	"breadcrumbs.enabled": false,
 	"breadcrumbs.icons": false,
 	"breadcrumbs.showKeys": false,
 	"breadcrumbs.showFiles": false,
@@ -101,7 +100,6 @@
 	"breadcrumbs.showMethods": false,
 	"breadcrumbs.showBooleans": false,
 	"breadcrumbs.showFunctions": false,
-	"breadcrumbs.showConstants": false,
 	"breadcrumbs.showEnumMembers": false,
 	"breadcrumbs.showConstructors": false,
 	// Настройки для JS и TS
@@ -152,10 +150,17 @@
 		"rgba(79,236,236,1)"
 	],
 	"editor.renderWhitespace": "all",
-	"editor.glyphMargin": false,
 	// "workbench.editor.tabSizingFixedMaxWidth": 100,
 	"notebook.defaultFormatter": "esbenp.prettier-vscode",
 	"vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
 	"editor.lineNumbers": "relative",
-	"diffEditor.hideUnchangedRegions.enabled": true
+	"diffEditor.hideUnchangedRegions.enabled": true,
+	"code-runner.runInTerminal": true,
+	"code-runner.preserveFocus": false,
+	"editor.glyphMargin": false,
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.autopep8"
+	},
+	"workbench.colorTheme": "Moonlight II Italic",
+	"security.workspace.trust.untrustedFiles": "open"
 }

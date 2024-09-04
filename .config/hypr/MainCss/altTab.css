@@ -1,0 +1,14 @@
+/* Пример кастомного CSS для hyprswitch */
+.window-title {
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #333333;
+}
+
+.window-list {
+  background-color: #222222;
+}
+
+.window-item:hover {
+  background-color: #444444;
+}

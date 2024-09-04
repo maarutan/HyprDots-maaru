@@ -8,5 +8,5 @@
  **/
 
 * {
-    font: "Fira Code 20";
+    font: "Fira Code 16";
 }
